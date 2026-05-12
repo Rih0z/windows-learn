@@ -2,10 +2,14 @@
 
 『Windows Internals』Part 1 / Part 2 が説明する概念を、**ReactOS のオープンソース実装** で対応コードを追いながら毎日少しずつ深く理解する。書籍は概念・データ構造・挙動を語るが Windows カーネル本体は非公開なので、NT 互換実装である ReactOS を「読める Windows」として参照する。
 
+> **学習計画と進捗管理**: [`../LEARNING-PLAN.md`](../LEARNING-PLAN.md) を参照。52 週で Part 1 + Part 2 を読破するスケジュール、章ごとサブゴール、進捗チェックボックスがある。
+>
+> **テンプレ**: 日次ログ → [`daily/_TEMPLATE.md`](daily/_TEMPLATE.md) ／ 週次レビュー → [`_WEEKLY-REVIEW-TEMPLATE.md`](_WEEKLY-REVIEW-TEMPLATE.md)
+
 ## 学習スタイル
 
-- **頻度**: 1 日 1 トピック小さく。完璧主義より継続。
-- **粒度**: 1 ノート = 書籍の 1 節 ～ 1 章。長くなるなら分割。
+- **時間**: 平日 60 分 / 土日オフ（[LEARNING-PLAN.md](../LEARNING-PLAN.md) で 52 週ペース化済）
+- **粒度**: 1 ノート = 書籍の 1 節 ～ 1 章。長くなるなら分割
 - **手順**:
   1. 書籍の該当節を読む
   2. 出てくる構造体・関数名で ReactOS リポジトリを検索
@@ -46,14 +50,22 @@ notes/
 
 ## ノートのテンプレ
 
-各トピックノートは以下のセクションで統一する:
+各トピックノート（章サマリ）は以下のセクションで統一する:
 
 1. **書籍の要点** — 概念・データ構造・挙動を 3〜5 個の箇条書きで
 2. **登場する構造体・関数** — `EPROCESS` / `PspCreateProcess` 等を列挙
-3. **ReactOS 実装対応** — リポジトリ内ファイルパスと該当関数 / 行へのリンク or 抜粋
+3. **ReactOS 実装対応** — リポジトリ内ファイルパスと該当関数 / 行へのリンク or 抜粋（リンクは commit SHA 付き permalink）
 4. **書籍と実装の差分・気付き** — ReactOS が簡略化している点、Windows 固有の機能で未実装な点
 5. **WinDbg / Sysinternals での観測** — 実 Windows でのコマンドと結果
 6. **疑問・宿題** — 翌日以降に持ち越すもの
+
+日次ログは [`daily/_TEMPLATE.md`](daily/_TEMPLATE.md)、週次レビューは [`_WEEKLY-REVIEW-TEMPLATE.md`](_WEEKLY-REVIEW-TEMPLATE.md) を雛形に。
+
+## 進捗の付け方
+
+- 日次: `notes/daily/YYYY-MM-DD.md` を `_TEMPLATE.md` から作成（10 分で埋まる粒度に保つ）
+- 週次: 金曜の枠で `notes/daily/YYYY-MM-DD-weekly.md` を `_WEEKLY-REVIEW-TEMPLATE.md` から作成
+- 章完了: 章サマリを `notes/part{1,2}/chNN-<slug>.md` として完成 → このページの章インデックスに追記 → `LEARNING-PLAN.md` のチェックボックスを ✅
 
 ## ツール
 
