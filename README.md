@@ -1,8 +1,15 @@
 # windows-learn
 
-Windows 環境での学習・検証用作業ディレクトリ。
+『Windows Internals』(Part 1 / Part 2) を題材とした Windows OS 内部構造の学習用リポジトリ。
 
 ## 構成
 
-- `.oss/` — OSS 関連の検証メモ
-- `.pdf/` — PDF 資料置き場（gitignore 対象）
+- `.oss/` — 検証用スクリプト・メモ
+- `.pdf/` — 書籍 PDF 置き場（gitignore 対象。リポジトリには含まれない）
+
+## 対象書籍
+
+- Windows Internals, Part 1
+- Windows Internals, Part 2
+
+書籍 PDF はローカルの `.pdf/` に配置し、リポジトリには push しない。学習ノート・コード・検証結果のみを管理する。
